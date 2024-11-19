@@ -23,3 +23,22 @@ function App() {
 }
 
 export default App;
+
+// src/App.js
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import BeerList from './components/BeerList';
+import './App.css';
+
+const App = () => (
+  <Provider store={store}>
+    <div className="App">
+      <h1>Beer Explorer</h1>
+      <BeerList />
+    </div>
+  </Provider>
+);
+
+export default App;
+
